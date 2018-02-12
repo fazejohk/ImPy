@@ -1,4 +1,1 @@
-### Markdown
-
-Implementing Python
-
+### Implementing Python
