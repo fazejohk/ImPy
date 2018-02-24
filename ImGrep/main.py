@@ -2,16 +2,17 @@
 import sys
 import getopt
 
-#The goal is to implement grep
-#will be used only to .txt files
-#Main will just be there to take input from console commands
+# The goal is to implement grep
+# will be used only to .txt files
+# Main will just be there to take input from console commands
 
-#==========================================================
+# ==========================================================
 
 class Grep():
 
-    def Finder(self):
-        if (arg):
+    @staticmethod
+    def Finder(input):
+        if arg:
             print "lUl"
         else:
             print "Naa"
@@ -36,11 +37,11 @@ class Grep():
                 outputfile = arg
         print "Listing files", inputfile
 
-#==========================================================
+# ==========================================================
 
-#Running the goddamn ting
+# Running the goddamn ting
 
 if __name__ == "__main__":
     Grep.Main(sys.argv[1:])
     aja = Grep()
-    aja.Finder()
+    aja.Finder(arg)
