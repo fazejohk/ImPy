@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SecureNote</title>
+    <script>
+          fetch('test.txt')
+            .then(response => response.text())
+            .then(text => console.log(text[0-5]))
+          function getInfo(){
+            var username = document.getElementById("Username").value
+            var password = document.getElementById("Password").value
+            if (username == "Admin" && password == "admin") {
+              console.log("DONE");
+            }
+            console.log("You'r username is " + username + " and you password is " + password);
+          }
+    </script>
+</head>
+<body background="820418.jpg">
+  <h1 style="color:white;">SecureNote</h1>
+  <form>
+    <input id="Username" placeholder="Username">
+    <input id="Password" placeholder="Password">
+    <button type="button" onclick="getInfo()">Login</button>
+</body>
+</html>
