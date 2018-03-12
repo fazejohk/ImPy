@@ -2,7 +2,7 @@ from pydub import AudioSegment
 from pydub.playback import play
 from time import sleep
 
-soundfx = AudioSegment.from_wav("ting.wav")
+soundfx = AudioSegment.from_wav("/root/ImPy/ting.wav")
 
 
 
