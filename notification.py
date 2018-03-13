@@ -19,7 +19,7 @@ while 1:
             print "Alright going to sleep\n" + str(check)
             sleep(10)
         else:
-            play(soundfx)
+            #play(soundfx)
             print "Something changed"
             check = str(review)
             break
