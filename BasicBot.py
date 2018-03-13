@@ -90,9 +90,9 @@ async def on_message(message):
                 if guess == answer:
                     await client.send_message(message.channel, "YOU WON!!! Answer was:" + str(answer))
                 elif guess < str(answer):
-                    await client.send_message(message.channel, "You were too high bitcch :) \nAnswer:" + str(answer))
+                    await client.send_message(message.channel, "You were too high :) \nAnswer:" + str(answer))
                 elif guess > str(answer):
-                    await client.send_message(message.channel, "You were too low bitchh :)) \nAnswer:" + str(answer))
+                    await client.send_message(message.channel, "You were too low :)) \nAnswer:" + str(answer))
                 else:
                     await client.send_message(message.channel, "wtf did you do cuz i dont know")
             except Exception as e:
