@@ -8,6 +8,8 @@ from discord.ext.commands import Bot
 from discord.ext import commands
 import platform
 import wikipedia
+
+
 # Here you can modify the bot's prefix and description and wether it sends help in direct messages or not.
 client = Bot(description="21Savage#1665", command_prefix="21", pm_help = False)
 

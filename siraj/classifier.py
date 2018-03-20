@@ -13,13 +13,16 @@ with open("test.txt", 'r') as f:
     clones = 0
     for line in text:
         if line in keys:
-            movies.update(line=movies[str(line)] + 1)
+            movies[str(line)] += 1
         else:
             movies[line] = 1
 
 
 print movies
-
+with open("btw.txt", 'a') as f:
+    maximum = max(movies, key=movies.get)
+    minimum = min(movies, key=movies.get)
+    f.write("The best movie goes to:" + str(maximum) + "The worst movie goes to:" + str(minimum))
 
 
 
