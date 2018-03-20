@@ -3,6 +3,7 @@
 import discord
 from random import randint
 from random import choice
+from PyLyrics import *
 import asyncio
 from discord.ext.commands import Bot
 from discord.ext import commands
@@ -101,6 +102,17 @@ async def on_message(message):
                 await client.send_message(message.channel, "WTF DUDE " + str(e))
         else:
             await client.send_message(message.channel, "Guess works like this !guess [number] it has to be in the range from 1-100")
+
+    elif message.content.startswith('!albums'):
+        if message.content[7:]:
+           try:
+               user = message.content[7:]
+               albums = PyLyrics.getAlbums(str(user))
+               await client.send_message(message.channel, albums)
+           except Exception as e:
+                 await client.send_message(message.channel, "You did something wrong\n" + str(e))
+        else:
+             await client.send_message(message.channel, "Search for your artist like this\n !albums Post Malone")
 # After you have modified the code, feel free to delete the line above so it does not keep popping up everytime you initiate the ping commmand.
 
 client.run('NDE0Mzc5OTg3NDA0MzI0ODc0.DWmihw.76GQrIkWn4QkcSd2P1M_UmxISRY')
